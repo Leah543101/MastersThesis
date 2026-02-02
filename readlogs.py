@@ -201,7 +201,8 @@ def eventssubfiles():
         elif not isinstance(existing, list):
             existing = []
 
-        existing.append(value)
+        if value not in existing:
+            existing.append(value)
  
         with open(filename, "w", encoding="utf-8") as f:     
                 json.dump(existing,f, ensure_ascii=False,indent=2)
