@@ -9,6 +9,7 @@ import pandas as pd
 from pandas import json_normalize
 import re
 import ast
+from collections import defaultdict
 
 path = os.path.join("/root/ThesisProject/testsparklog/smalllogs/spark-b6cbe34c521e44439afd3f5e7e2e5977")
 
@@ -71,9 +72,10 @@ def recordevents():
             if match:
                 dict_string = match.group()
                 dictionary = ast.literal_eval(dict_string)
-                return dictionary['Event']
+                record_events.append(dictionary['Event'])
         else:
             record_events.append(value["Event"])
+             
 
     return record_events
     
@@ -153,3 +155,29 @@ def check_all_events_captured():
         else:
             return f"entry {entry} not found"
 
+
+def recordentriesjson():
+    events_keys = read_logs(path) 
+    groups = defaultdict(list)
+
+    for val in events_keys:
+        if not isinstance(val, dict):
+            match = re.search(r'\{.*\}', val)
+            if match:
+                dict_string = match.group()
+                dictionary = ast.literal_eval(dict_string)
+                events_keys.append(dictionary['Event'])
+        else:
+            print("Processing records:")
+            common_entries = next(iter(val.keys()))
+            groups[common_entries].append(val)
+    print(f"{groups} \n")
+
+    for key, items in groups.items():
+        filename = f"{key}.json"
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(items,f, ensure_ascii=False,indent=2)
+            print(f"Created {filename} for")
+    return groups
+
+recordentriesjson()
