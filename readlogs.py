@@ -11,7 +11,7 @@ import re
 import ast
 from collections import defaultdict
 
-path = os.path.join("/root/ThesisProject/testsparklog/smalllogs/spark-b6cbe34c521e44439afd3f5e7e2e5977")
+path = os.path.join("./smalllogs/spark-b6cbe34c521e44439afd3f5e7e2e5977")
 
 records =[]
 def read_logs(datapath):
@@ -168,16 +168,46 @@ def recordentriesjson():
                 dictionary = ast.literal_eval(dict_string)
                 events_keys.append(dictionary['Event'])
         else:
-            print("Processing records:")
+            #print("Processing records:")
             common_entries = next(iter(val.keys()))
             groups[common_entries].append(val)
-    print(f"{groups} \n")
+    #print(f"{groups} \n")
 
     for key, items in groups.items():
         filename = f"{key}.json"
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(items,f, ensure_ascii=False,indent=2)
-            print(f"Created {filename} for")
+            #print(f"Created {filename} for")
     return groups
 
-recordentriesjson()
+def eventssubfiles():
+    data = recordentriesjson()
+    for value in data["Event"]:
+        value_key = value["Event"]
+        filename = os.path.join(f"./smalllogs/spark-b6cbe/{value_key}.json")
+
+        if os.path.exists(filename):
+            with open(filename, 'r', encoding="utf-8") as f:
+                try:
+                    existing = json.load(f)
+                except json.JSONDecodeError:
+                    existing = []
+        else:
+            existing = []
+
+        
+        if isinstance(existing, dict):
+            existing = [existing]
+        elif not isinstance(existing, list):
+            existing = []
+
+        existing.append(value)
+ 
+        with open(filename, "w", encoding="utf-8") as f:     
+                json.dump(existing,f, ensure_ascii=False,indent=2)
+        # from the event, create a new file
+    return data
+eventssubfiles()
+    
+# check if event matched the file name
+# if it matches add the data to that file 
