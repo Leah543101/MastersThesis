@@ -1,0 +1,81 @@
+[2026-02-03 15:22:44] WARN  org.apache.spark.util.Utils - Your hostname, segotxl793, resolves to a loopback address: 127.0.1.1; using 131.97.50.45 instead (on interface ens192)
+[2026-02-03 15:22:44] WARN  org.apache.spark.util.Utils - Set SPARK_LOCAL_IP if you need to bind to another address
+[2026-02-03 15:22:44] INFO  org.apache.spark.SparkContext - Running Spark version 4.1.1
+[2026-02-03 15:22:44] INFO  org.apache.spark.SparkContext - OS info Linux, 6.8.0-90-generic, amd64
+[2026-02-03 15:22:44] INFO  org.apache.spark.SparkContext - Java version 21.0.10+7-Ubuntu-124.04
+[2026-02-03 15:22:44] WARN  org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-02-03 15:22:44] INFO  org.apache.spark.resource.ResourceUtils - ==============================================================
+[2026-02-03 15:22:44] INFO  org.apache.spark.resource.ResourceUtils - No custom resources configured for spark.driver.
+[2026-02-03 15:22:44] INFO  org.apache.spark.resource.ResourceUtils - ==============================================================
+[2026-02-03 15:22:44] INFO  org.apache.spark.SparkContext - Submitted application: Spark Test Application
+[2026-02-03 15:22:44] INFO  org.apache.spark.SecurityManager - Changing view acls to: a543101
+[2026-02-03 15:22:44] INFO  org.apache.spark.SecurityManager - Changing modify acls to: a543101
+[2026-02-03 15:22:44] INFO  org.apache.spark.SecurityManager - Changing view acls groups to: a543101
+[2026-02-03 15:22:44] INFO  org.apache.spark.SecurityManager - Changing modify acls groups to: a543101
+[2026-02-03 15:22:44] INFO  org.apache.spark.SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: a543101 groups with view permissions: EMPTY; users with modify permissions: a543101; groups with modify permissions: EMPTY; RPC SSL disabled
+[2026-02-03 15:22:45] INFO  org.apache.spark.util.Utils - Successfully started service 'sparkDriver' on port 42135.
+[2026-02-03 15:22:45] INFO  org.apache.spark.SparkEnv - Registering MapOutputTracker
+[2026-02-03 15:22:45] INFO  org.apache.spark.SparkEnv - Registering BlockManagerMaster
+[2026-02-03 15:22:45] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-02-03 15:22:45] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint - BlockManagerMasterEndpoint up
+[2026-02-03 15:22:45] INFO  org.apache.spark.SparkEnv - Registering BlockManagerMasterHeartbeat
+[2026-02-03 15:22:45] INFO  org.apache.spark.storage.DiskBlockManager - Created local directory at /tmp/blockmgr-223a372b-6ef2-4100-ba47-7fdf1c278783
+[2026-02-03 15:22:45] INFO  org.apache.spark.SparkEnv - Registering OutputCommitCoordinator
+[2026-02-03 15:22:45] INFO  org.apache.spark.ui.JettyUtils - Start Jetty 0.0.0.0:4040 for SparkUI
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.Server - jetty-11.0.26; built: 2025-08-14T18:03:14.457Z; git: 7559873b6e46eea7c2c6da2b58327ea2ecf941f4; jvm 21.0.10+7-Ubuntu-124.04
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.Server - Started Server@e73ef42{STARTING}[11.0.26,sto=30000] @1466ms
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.AbstractConnector - Started ServerConnector@ede91b4{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+[2026-02-03 15:22:45] INFO  org.apache.spark.util.Utils - Successfully started service 'SparkUI' on port 4040.
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1205fa53{/,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.apache.spark.resource.ResourceProfile - Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-02-03 15:22:45] INFO  org.apache.spark.resource.ResourceProfile - Limiting resource is cpu
+[2026-02-03 15:22:45] INFO  org.apache.spark.resource.ResourceProfileManager - Added ResourceProfile id: 0
+[2026-02-03 15:22:45] INFO  org.apache.spark.SecurityManager - Changing view acls to: a543101
+[2026-02-03 15:22:45] INFO  org.apache.spark.SecurityManager - Changing modify acls to: a543101
+[2026-02-03 15:22:45] INFO  org.apache.spark.SecurityManager - Changing view acls groups to: a543101
+[2026-02-03 15:22:45] INFO  org.apache.spark.SecurityManager - Changing modify acls groups to: a543101
+[2026-02-03 15:22:45] INFO  org.apache.spark.SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: a543101 groups with view permissions: EMPTY; users with modify permissions: a543101; groups with modify permissions: EMPTY; RPC SSL disabled
+[2026-02-03 15:22:45] INFO  org.apache.spark.executor.Executor - Starting executor ID driver on host 131.97.50.45
+[2026-02-03 15:22:45] INFO  org.apache.spark.executor.Executor - OS info Linux, 6.8.0-90-generic, amd64
+[2026-02-03 15:22:45] INFO  org.apache.spark.executor.Executor - Java version 21.0.10+7-Ubuntu-124.04
+[2026-02-03 15:22:45] INFO  org.apache.spark.executor.Executor - Starting executor with user classpath (userClassPathFirst = false): ''
+[2026-02-03 15:22:45] INFO  org.apache.spark.executor.Executor - Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@44a27a24 for default.
+[2026-02-03 15:22:45] INFO  org.apache.spark.util.Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43669.
+[2026-02-03 15:22:45] INFO  org.apache.spark.network.netty.NettyBlockTransferService - Server created on 131.97.50.45:43669
+[2026-02-03 15:22:45] INFO  org.apache.spark.storage.BlockManager - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-02-03 15:22:45] INFO  org.apache.spark.storage.BlockManagerMaster - Registering BlockManager BlockManagerId(driver, 131.97.50.45, 43669, None)
+[2026-02-03 15:22:45] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint - Registering block manager 131.97.50.45:43669 with 434.4 MiB RAM, BlockManagerId(driver, 131.97.50.45, 43669, None)
+[2026-02-03 15:22:45] INFO  org.apache.spark.storage.BlockManagerMaster - Registered BlockManager BlockManagerId(driver, 131.97.50.45, 43669, None)
+[2026-02-03 15:22:45] INFO  org.apache.spark.storage.BlockManager - Initialized BlockManager: BlockManagerId(driver, 131.97.50.45, 43669, None)
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Stopped o.s.j.s.ServletContextHandler@1205fa53{/,null,STOPPED,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@263cf020{/jobs,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2cd64437{/jobs/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1ec49c8b{/jobs/job,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3dce5be2{/jobs/job/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6b2f9a48{/stages,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@49264cff{/stages/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5fb1f178{/stages/stage,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@736f0e34{/stages/stage/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6a60254d{/stages/pool,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4b7f8975{/stages/pool/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4bf54244{/stages/taskThreadDump,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6d02117d{/stages/taskThreadDump/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@ed86b6f{/storage,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2184ac10{/storage/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@74119fa6{/storage/rdd,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2ae383c5{/storage/rdd/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@132ec016{/environment,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@11a3644f{/environment/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4b9e2a61{/executors,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@27ad337f{/executors/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@18848ed3{/executors/threadDump,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4e1e6118{/executors/threadDump/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4bb4daba{/executors/heapHistogram,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@42a87429{/executors/heapHistogram/json,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@9fcc5e2{/static,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3030fdc4{/,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5318c7b7{/api,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@78be62ec{/metrics,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@21ff3bd9{/jobs/job/kill,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1236784a{/stages/stage/kill,null,AVAILABLE,@Spark}
+[2026-02-03 15:22:45] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7310e093{/metrics/json,null,AVAILABLE,@Spark}
