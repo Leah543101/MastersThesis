@@ -1,20 +1,21 @@
 services:
   spark-master:
-    image: sparkkubetest:local
+    image: sparkkubetestmaster:4.0.1
     container_name: spark-master
-    command: >
-      /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master     
+    hostname: spark-master
+    entrypoint: ["/usr/local/bin/entrypoint-master.sh"]
     ports:
-      - "7077:7077"  # Spark Master port for worker communication
-      - "8080:8080"  # Spark Master Web UI
-      
+      - "7077:7077"   # Spark master RPC
+      - "8080:8080"   # Spark master UI
 
   spark-worker:
-    image: sparkkubetest:local
+    image: sparkkubetestmaster:4.0.1
+    container_name: spark-worker
+    hostname: spark-worker
+    entrypoint: ["/usr/local/bin/entrypoint-worker.sh"]
+    environment:
+      - SPARK_MASTER_URL=spark://spark-master:7077
     depends_on:
       - spark-master
-    command: >
-      /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker
-      spark://spark-master:7077
     ports:
-      - "8082:8082"  # Spark Worker Web UI
+      - "8081:8081"

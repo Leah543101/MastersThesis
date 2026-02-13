@@ -9,12 +9,6 @@ USER root
 COPY container_meter /usr/local/bin/container_meter
 RUN chmod +x /usr/local/bin/container_meter
 
-COPY ../entrypoint-master.sh /usr/local/bin/entrypoint-master.sh
-COPY ../entrypoint-worker.sh /usr/local/bin/entrypoint-worker.sh
-RUN chmod +x /usr/local/bin/entrypoint-master.sh /usr/local/bin/entrypoint-worker.sh
-
 USER spark
 
 WORKDIR /app/sparktest/sparktestexperiments
-
-CMD ["bash"]
